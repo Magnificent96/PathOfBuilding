@@ -1,0 +1,52 @@
+!!!!Opis struktury!!!!
+
+<div class="tip-wrapper normal-tip" data-type="t_item">
+│
+├── <div class="content">
+│   │
+│   └── <div class="item-head">
+│       │
+│       ├── <div class="item">
+│       │    ├── <canvas class="canvas-icon icon"></canvas>  ← ikona przedmiotu
+│       │    └── <canvas class="canvas-notice"></canvas>
+│       │
+│       ├── <div class="item-name">                      ← nazwa przedmiotu
+│       └── <div class="item-type">Typ: Buty</div>       ← typ przedmiotu (np. Buty)
+│
+├── <div class="item-tip-section s-1">                   ← 1. sekcja (np. rzadkość)
+│   └── <div class="item-rarity heroic">Heroiczny</div>
+│
+├── <div class="item-tip-section s-3">                   ← 3. sekcja (statystyki)
+│   ├── <span>Atak fizyczny: <span class="damage">521</span></span>
+│   └── ...
+│
+├── <div class="item-tip-section s-8">                   ← dodatkowe informacje
+│   └── <span>Wiąże po założeniu</span>
+│
+└── <div class="item-tip-section s-9">                   ← sekcja z wymaganiami
+    ├── <div class="prof-icons-holder">
+    │    └── <span class="disabled">Wymagana profesja: ...</span>
+    ├── <div class="level-required">
+    │    └── <span>Wymagany poziom: ...</span>
+    ├── <div class="value-item">
+    │    └── <span class="val">763.8k</span>
+    └── <div class="item-type">Typ: Buty</div>  ← (przenoszone tu przez JS)
+
+!!!!Opis sekcji!!!!
+
+| Klasa                    | Opis                                   |
+| ------------------------ | -------------------------------------- |
+| `tip-wrapper normal-tip` | Cały tooltip (kontener)                |
+| `item-head`              | Główka tooltipa (ikona + nazwa + typ)  |
+| `item`                   | Ikonka przedmiotu (zawiera `<canvas>`) |
+| `canvas-icon`            | Obraz przedmiotu                       |
+| `item-name`              | Nazwa przedmiotu                       |
+| `item-type`              | Typ (np. Miecz, Buty)                  |
+| `item-rarity heroic`     | Rzadkość (heroiczny, legendarny...)    |
+| `item-tip-section s-3`   | Statystyki typu atak, życie itd.       |
+| `damage`                 | Liczby/statystyki (podświetlane)       |
+| `item-tip-section s-9`   | Wymagania (profesja, poziom, wartość)  |
+| `prof-icons-holder`      | Profesja                               |
+| `level-required`         | Poziom                                 |
+| `value-item` / `val`     | Wartość złota                          |
+
